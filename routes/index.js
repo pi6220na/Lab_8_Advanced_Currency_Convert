@@ -34,6 +34,26 @@ router.get('/convert', function(req, res, next) {
         }
 
         else {
+
+
+            function listAllProperties(o) {
+                var objectToInspect;
+                var result = [];
+
+                for(objectToInspect = o; objectToInspect !== null; objectToInspect = Object.getPrototypeOf(objectToInspect)) {
+                    result = result.concat(Object.getOwnPropertyNames(objectToInspect));
+                }
+
+                return result;
+            }
+            conv_data.base = 999;
+            checkThis = listAllProperties(conv_data);
+            console.log("checkThis = " + checkThis);
+
+
+
+
+
         //    return res.render('results', { apod : apod_data, title : "APOD for " + apod_data.date });
             for (item in conv_data) {
                 console.log("********** item = " + item);

@@ -11,7 +11,7 @@ function currencyRequest(callback, base, to) {
     }
 
 
-    console.log("base.currency = " + base.currency + " base.from_currency = " + base.from_currency + "base.to_currency = " + base.to_currency);
+    console.log("base.currency = " + base.currency + " base.from_currency = " + base.from_currency + " base.to_currency = " + base.to_currency);
 
 
     queryParam = { 'base' : base.from_currency,  "symbols" : base.to_currency };
